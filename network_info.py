@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: UTF-8 -*-
 
-# Project Title: Network Info (https://github.com/KafetzisThomas/Network-Info)
+# Project Title: my-ip (https://github.com/KafetzisThomas/my-ip)
 # Author / Project Owner: KafetzisThomas (https://github.com/KafetzisThomas)
 
 import sys, socket, time, colorama
