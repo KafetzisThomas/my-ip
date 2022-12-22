@@ -34,10 +34,15 @@ try:
     while True:
         time.sleep(1)
         print("-" * 42)
+        
+        # Fetch computer name
         hostname = socket.gethostname()
+        # Fetch computer ip address
         LocalIp = socket.gethostbyname(hostname)
+        # Fetch public ip address
         PublicIp = get('https://api.ipify.org').text
   
+        #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ OUTPUT ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
         print(f"Current Time:        {F.GREEN}{currentTime}")
         print(f"Computer Name:       {F.GREEN}{hostname}")
         print(f"Computer IP Address: {F.GREEN}{LocalIp}")
