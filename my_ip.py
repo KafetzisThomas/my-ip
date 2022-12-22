@@ -23,6 +23,10 @@ try:
     # Fetch download & upload speed
     download = st.download()
     upload = st.upload()
+
+    # Fetch ping
+    st.get_servers()
+    ping = st.results.ping
     
     input(f"\nPress {F.GREEN}Enter{F.RESET} to Continue/{F.RED}Ctrl+C{F.RESET} to Stop")
     while True:
@@ -38,6 +42,7 @@ try:
         print(f"Your Public IP Address is: {F.RED}{PublicIp}")
         print(f"Download Speed: {F.GREEN}{'%.2f' % (download / 1_000_000)} Mbps")
         print(f"Upload Speed: {F.GREEN}{'%.2f' % (upload / 1_000_000)} Mbps")
+        print(f"Ping: {F.GREEN}{ping}")
 
 except KeyboardInterrupt:
     print(f"{F.RED}Operation canceled.")
