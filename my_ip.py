@@ -13,6 +13,8 @@ import colorama
 from colorama import Fore as F
 colorama.init(autoreset=True)
 
+print("\nIt's searching data according your network. This may take a few seconds...")
+
 try:
     # Get current time in a 24Hour format
     currentDateAndTime = datetime.now()
@@ -36,13 +38,13 @@ try:
         LocalIp = socket.gethostbyname(hostname)
         PublicIp = get('https://api.ipify.org').text
   
-        print(f"Current Time: {F.GREEN}{currentTime}")
-        print(f"Your Computer Name is: {F.GREEN}{hostname}")
-        print(f"Your Computer IP Address is: {F.GREEN}{LocalIp}")
-        print(f"Your Public IP Address is: {F.RED}{PublicIp}")
-        print(f"Download Speed: {F.GREEN}{'%.2f' % (download / 1_000_000)} Mbps")
-        print(f"Upload Speed: {F.GREEN}{'%.2f' % (upload / 1_000_000)} Mbps")
-        print(f"Ping: {F.GREEN}{ping}")
+        print(f"Current Time:        {F.GREEN}{currentTime}")
+        print(f"Computer Name:       {F.GREEN}{hostname}")
+        print(f"Computer IP Address: {F.GREEN}{LocalIp}")
+        print(f"Public IP Address:   {F.RED}{PublicIp}")
+        print(f"Download Speed:      {F.GREEN}{'%.2f' % (download / 1_000_000)} Mbps")
+        print(f"Upload Speed:        {F.GREEN}{'%.2f' % (upload / 1_000_000)} Mbps")
+        print(f"Ping:                {F.GREEN}{ping}")
 
 except KeyboardInterrupt:
     print(f"{F.RED}Operation canceled.")
